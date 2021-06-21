@@ -1,0 +1,11 @@
+{
+  "name": "together",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/diegobressler/together.git",
+  "author": "diegobressler <diegobressler@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
+}
