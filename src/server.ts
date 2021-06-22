@@ -5,18 +5,18 @@ import axios from "axios";
 const app = express();
 const token = 'b85e8ee4854850a0c0cdccb971434298513a155c';
 
-app.get('/o', async(req, res) => {
+app.get('/oi', async(req, res) => {
     try{
-        const {data} = await axios('https://api.brasil.io/v1/dataset/socios-brasil/empresas/data/?cnpj=92343375000172',
+        const { data } = await axios('https://api.brasil.io/v1/dataset/socios-brasil/empresas/data/?cnpj=92343375000172',
         {
             headers:{
-                Authorization: token
+                Authorization: 'Token '+token
             }
         })
-        return res.send(data)
+        return res.json(data["results"][0].cnpj)
         
     }catch(error){
-        return res.send(req.headers)
+        return res.send(error)
         
     }
 })
